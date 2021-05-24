@@ -1,7 +1,7 @@
 interface ChildProps {
 	color: string;
 	onClick: () => void;
-	chlidren: 'this is children property';
+	chlidren?: 'this is children property';
 }
 
 //first example of function component
