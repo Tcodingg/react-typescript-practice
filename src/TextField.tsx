@@ -11,7 +11,7 @@ interface Props {
 	age?: number;
 	fn?: (name: string) => string;
 	person: person;
-	handleChange: () => (event: React.ChangeEvent<HTMLInputElement>) => void;
+	handleChange?: () => (event: React.ChangeEvent<HTMLInputElement>) => string;
 }
 
 interface TextMode {
@@ -22,6 +22,7 @@ export const TextField: React.FC<Props> = ({ handleChange }) => {
 	//const [count, setCount] = useState<number | null>(5);
 
 	const [count, setCount] = useState<number | null>(5);
+	// const inputRef = useRef<HTMLInputElement>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	const divRef = useRef<HTMLInputElement>(null);
 
